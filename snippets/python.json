@@ -1,0 +1,38 @@
+{
+  "pydantic dotenv": {
+    "body": [
+      "from functools import lru_cache",
+      "from pydantic_settings import BaseSettings, SettingsConfigDict",
+      "",
+      "",
+      "class Settings(BaseSettings):",
+      "    \"\"\"",
+      "    Application settings",
+      "",
+      "    Configuration is loaded automatically by pydantic-settings",
+      "    with the following precedence (later steps will overwrite",
+      "    previous ones given a name collision):",
+      "    1. default values",
+      "    2. constructor arguments",
+      "    3. environment variables",
+      "    4. dotenv (.env) file variables",
+      "    \"\"\"",
+      "",
+      "    model_config = SettingsConfigDict(",
+      "        env_file=\".env\", env_ignore_empty=True, extra=\"ignore\", validate_default=True",
+      "    )",
+      "",
+      "    ${1:VAR_NAME}: $0",
+      "",
+      "",
+      "@lru_cache",
+      "def get_settings():",
+      "    \"\"\"",
+      "    Read from .env and instantiate an app.Settings object,",
+      "    or return a cached one if this has been done already",
+      "    \"\"\"",
+      "    return Settings()  # type: ignore"
+    ],
+    "prefix": "pydantic dotenv"
+  }
+}

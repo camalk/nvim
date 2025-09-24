@@ -1,0 +1,10 @@
+{
+  "impass": {
+    "body": "import ${1:asset} from '\\$lib/assets/${2:file}.${3:extension}';",
+    "prefix": "impass"
+  },
+  "vsne": {
+    "body": "${1:fieldname}: v.pipe(v.string(), v.nonEmpty()),",
+    "prefix": "vsne"
+  }
+}
