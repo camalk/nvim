@@ -248,10 +248,38 @@ local magnate = [[
                                                                    
 ]]
 
+local south_park = [[
+                                                      
+      _O_        _____         _<>_          ___      
+    /     \     |     |      /      \      /  _  \    
+   |==/=\==|    |[/_\]|     |==\==/==|    |  / \  |   
+   |  O O  |    / O O \     |   ><   |    |  |"|  |   
+    \  V  /    /\  -  /\  ,-\   ()   /-.   \  X  /    
+    /`---'\     /`---'\   V( `-====-' )V   /`---'\    
+    O'_:_`O     O'M|M`O   (_____:|_____)   O'_|_`O    
+     -- --       -- --      ----  ----      -- --     
+                                                      
+    STAN         KYLE        CARTMAN        KENNY     
+                                                      
+                     -t. pruss                        
+]]
+
 local M = {}
 
-M.dashboards =
-    { hydra, westminster, skull, anatomy, lambda, therapy, bread, stallman_bucks, henry_kissinger, wise_cat, magnate }
+M.dashboards = {
+    hydra,
+    westminster,
+    skull,
+    anatomy,
+    lambda,
+    therapy,
+    bread,
+    stallman_bucks,
+    henry_kissinger,
+    wise_cat,
+    magnate,
+    south_park,
+}
 
 ---@return string
 M.get_random = function()
