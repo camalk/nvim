@@ -16,6 +16,7 @@ return {
             },
             formatters_by_ft = {
                 go = { "goimports", "gofumpt" },
+                astro = { "prettierd " },
                 javascript = { "prettierd" },
                 typescript = { "prettierd" },
                 javascriptreact = { "prettierd" },
