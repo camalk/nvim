@@ -19,4 +19,6 @@ vim.opt.shiftwidth = 4
 
 -- guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor
 vim.opt.guicursor =
-  "n-v-c-sm:block,i-ci-ve:block-blinkon500-blinkoff500,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
+    "n-v-c-sm:block,i-ci-ve:block-blinkon500-blinkoff500,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
+
+vim.g.lazyvim_prettier_needs_config = true
