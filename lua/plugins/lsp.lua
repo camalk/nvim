@@ -47,7 +47,9 @@ return {
                 pyright = {},
                 emmet_language_server = {},
                 bashls = {},
-                cssls = {},
+                cssls = {
+                    settings = { css = { lint = { unknownAtRules = "ignore" } } },
+                },
                 tailwindcss = {},
                 astro = {},
                 zls = {},
