@@ -67,26 +67,6 @@ return {
         },
     },
     -- -------------------------------------------------
-    --               DIAGFLOW                          |
-    --                                                 |
-    --               Better placement for              |
-    --               LSP Diagnostic Text               |
-    -- -------------------------------------------------
-
-    -- {
-    --     "dgagn/diagflow.nvim",
-    --     event = "LspAttach",
-    --     opts = {
-    --         format = function(diagnostic)
-    --             local clients = vim.lsp.buf_get_clients()
-    --             for _, client in ipairs(clients) do
-    --                 return client.name .. ": " .. diagnostic.message
-    --             end
-    --         end,
-    --     },
-    -- },
-
-    -- -------------------------------------------------
     --               BLINK.CMP                         |
     --                                                 |
     --               Lightning Fast Cmp                |
