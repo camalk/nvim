@@ -42,6 +42,15 @@ return {
         "neovim/nvim-lspconfig",
         ---@class PluginLspOpts
         opts = {
+            diagnostics = {
+                -- overwrite: doing this to enable "tiny-inline-diagnostic" plugin to work
+                -- without showing extra virtual text.
+                --
+                -- source: https://github.com/LazyVim/LazyVim/discussions/939
+                --
+                -- see defaults: https://www.lazyvim.org/plugins/lsp#nvim-lspconfig
+                virtual_text = false,
+            },
             inlay_hints = { enabled = false },
             servers = {
                 pyright = {},
@@ -81,6 +90,22 @@ return {
                 documentation = {
                     auto_show = false,
                 },
+            },
+        },
+    },
+    -- -------------------------------------------------
+    --                                                 |
+    --             TINY INLINE DIAG                    |
+    --                                                 |
+    -- -------------------------------------------------
+    {
+        "rachartier/tiny-inline-diagnostic.nvim",
+        event = "VeryLazy",
+        priority = 1000,
+        opts = {
+            preset = "powerline",
+            options = {
+                show_source = { enabled = true },
             },
         },
     },
