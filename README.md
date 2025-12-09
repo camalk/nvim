@@ -1,4 +1,29 @@
-# 💤 LazyVim
+# Cam's Neovim Config
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+LazyVim-based neovim config
+
+```
+├── init.lua                    # entrypoint
+├── lua/
+│   ├── config/                  # global/editor config
+│   └── plugins/                 # plugin specs / config
+│       └── <plugin-spec>.lua
+└── snippets/                    # auto-gen vsc snippets from 'scissors.nvim'
+    └── <lang>.json
+```
+
+## Install
+
+> requires `neovim>=11.0`
+
+1. Backup existing config
+
+```
+mv ~/.config/nvim ~/.config/nvim.bak
+```
+
+2. Clone repository
+
+```
+git clone git@github:camalk/nvim.git ~/.config/nvim
+```
