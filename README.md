@@ -1,5 +1,7 @@
 # Cam's Neovim Config
 
+<img width="1725" height="987" alt="image" src="https://github.com/user-attachments/assets/858b47ef-b315-49af-b0a9-b8a6d0a9411f" />
+
 LazyVim-based neovim config
 
 ```
