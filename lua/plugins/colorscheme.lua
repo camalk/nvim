@@ -13,7 +13,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "conifer-lunar",
+            colorscheme = "default",
         },
     },
 }
