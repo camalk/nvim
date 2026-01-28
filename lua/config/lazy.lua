@@ -61,3 +61,8 @@ require("lazy").setup({
         },
     },
 })
+
+-- custom highlights
+if vim.g.colors_name == "default" then
+    vim.api.nvim_set_hl(0, "@string.documentation.python", { link = "Comment" })
+end
