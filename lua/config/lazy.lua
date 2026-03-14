@@ -25,7 +25,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.svelte" },
         { import = "lazyvim.plugins.extras.lang.ocaml" },
 
-        { import = "lazyvim.plugins.extras.linting.eslint" },
+        -- { import = "lazyvim.plugins.extras.linting.eslint" },
 
         { import = "lazyvim.plugins.extras.coding.yanky" },
         { import = "lazyvim.plugins.extras.editor.mini-files" },
@@ -63,6 +63,6 @@ require("lazy").setup({
 })
 
 -- custom highlights
-if vim.g.colors_name == "default" then
+if vim.tbl_contains({ "default", "retrobox", "gruvbox-material" }, vim.g.colors_name) then
     vim.api.nvim_set_hl(0, "@string.documentation.python", { link = "Comment" })
 end

@@ -69,6 +69,22 @@ return {
                     settings = { gopls = { analyses = { fieldalignment = false } } },
                 },
                 lua_ls = {},
+                -- https://github.com/mikavilpas/dotfiles/blob/674fa0b6e113f38c7d3fb37c646015c01d2801d3/.config/nvim/lua/plugins/typescript.lua?plain=1#L9-L26
+                oxlint = {
+                    cmd = { "oxlint", "--lsp" },
+                    on_attach = function(client, bufnr)
+                        vim.api.nvim_buf_create_user_command(bufnr, "LspOxlintFixAll", function()
+                            client:exec_cmd({
+                                title = "Apply Oxlint automatic fixes",
+                                command = "oxc.fixAll",
+                                arguments = { { uri = vim.uri_from_bufnr(bufnr) } },
+                            })
+                        end, {
+                            desc = "Apply Oxlint automatic fixes",
+                        })
+                    end,
+                    mason = true,
+                },
             },
             setup = {
                 rust_analyzer = function()
