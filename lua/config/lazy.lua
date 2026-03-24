@@ -24,6 +24,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.terraform" },
         { import = "lazyvim.plugins.extras.lang.svelte" },
         { import = "lazyvim.plugins.extras.lang.ocaml" },
+        { import = "lazyvim.plugins.extras.lang.elixir" },
 
         -- { import = "lazyvim.plugins.extras.linting.eslint" },
 
